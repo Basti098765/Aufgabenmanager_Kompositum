@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ITKolleg.fxml.aufgabenmanagerController">
+   <children>
+      <Button fx:id="newTask" layoutX="49.0" layoutY="50.0" mnemonicParsing="false" onAction="#newTask" text="Neue Aufgabe Anlegen" />
+      <Button fx:id="newTaskList" layoutX="49.0" layoutY="101.0" mnemonicParsing="false" onAction="#newTaskList" text="Neue Aufgabenliste Anlegen" />
+      <Button fx:id="addTaskToList" layoutX="49.0" layoutY="153.0" mnemonicParsing="false" onAction="#addTaskToList" text="Aufgabe bestehender Liste hinzufügen" />
+      <Button fx:id="showDone" layoutX="395.0" layoutY="50.0" mnemonicParsing="false" onAction="#showDone" text="Erledigte Aufgaben anzeigen" />
+      <Button fx:id="showToDo" layoutX="395.0" layoutY="101.0" mnemonicParsing="false" onAction="#showToDo" text="Offene Aufgaben anzeigen" />
+      <Button fx:id="markDone" layoutX="49.0" layoutY="210.0" mnemonicParsing="false"  onAction="#markDone" text="Aufgabe als erledigt markeieren" />
+   </children>
+</AnchorPane>
