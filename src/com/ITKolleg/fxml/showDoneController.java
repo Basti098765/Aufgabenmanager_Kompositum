@@ -17,11 +17,15 @@ public class showDoneController {
     @FXML
     private Button end;
     private AufgabenListe all;
+
     public showDoneController()
     {
         all = aufgabenmanagerController.getList();
         loadList();
     }
+    /**
+     * Befüllt die Kiste mit allen Aufgaben die  erledigt sind
+     */
     public void loadList(){
         ArrayList<String> done=  new ArrayList<>();
         for (Aufgabe a: all.getAufgaben())

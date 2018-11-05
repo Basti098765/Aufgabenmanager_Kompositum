@@ -26,6 +26,10 @@ public class markDoneController {
         all = aufgabenmanagerController.getList();
         loadList();
     }
+
+    /**
+     * lädt die Liste der Aufgaben
+     */
     public void loadList(){
         ArrayList<String> done=  new ArrayList<>();
         for (Aufgabe a: all.getAufgaben())
@@ -46,7 +50,7 @@ public class markDoneController {
 
         undone.setOnMouseClicked(new EventHandler<MouseEvent>() {
             /**
-             * Fügt die ausgewählte Aufgabe der entsprechenden Liste hinzu
+             * markiert die ausgewählte Aufgabe als erledigt
              * @param event
              */
             @Override

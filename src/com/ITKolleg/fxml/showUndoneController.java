@@ -22,6 +22,10 @@ public class showUndoneController {
         all = aufgabenmanagerController.getList();
         loadList();
     }
+
+    /**
+     * Befüllt die Kiste mit allen Aufgaben die nicht erledigt sind
+     */
     public void loadList(){
         ArrayList<String> done=  new ArrayList<>();
         for (Aufgabe a: all.getAufgaben())

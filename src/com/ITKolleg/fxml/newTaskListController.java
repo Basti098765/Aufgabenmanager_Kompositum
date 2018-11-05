@@ -24,6 +24,9 @@ public class newTaskListController {
     private AufgabenListe list;
 
     @FXML
+    /**
+     * Erstelllt eine neue Aufgabenliste
+     */
     public void submit(ActionEvent event)
     {
         list= aufgabenmanagerController.getList();
