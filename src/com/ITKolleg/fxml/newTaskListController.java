@@ -25,12 +25,13 @@ public class newTaskListController {
 
     @FXML
     /**
-     * Erstelllt eine neue Aufgabenliste
+     * Erstelllt eine neue Aufgabenliste z
      */
     public void submit(ActionEvent event)
     {
         list= aufgabenmanagerController.getList();
         AufgabenListe a = new AufgabenListe(beschreibung.getText());
+        a.hinzufuegen(new Einzelaufgabe("def"));
         list.hinzufuegen(a);
         aufgabenmanagerController.setList(list);
         beschreibung.setText("");

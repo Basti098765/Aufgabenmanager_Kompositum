@@ -20,6 +20,10 @@ public class showUndoneController {
     public showUndoneController()
     {
         all = aufgabenmanagerController.getList();
+
+    }
+    @FXML
+    public void initialize(){
         loadList();
     }
 

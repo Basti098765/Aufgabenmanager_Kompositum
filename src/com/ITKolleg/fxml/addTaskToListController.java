@@ -28,7 +28,7 @@ public class addTaskToListController {
     @FXML
     private Label head1;
     @FXML
-    private ListView listOfLists;
+    private ListView<String> listOfLists;
     @FXML
     private ListView listOfTasks;
     @FXML
@@ -43,15 +43,20 @@ public class addTaskToListController {
      */
     public addTaskToListController() {
          toAdd=aufgabenmanagerController.getList();
-        fillList();
+
     }
 
     /**
      * Füllt die Listen und wartet auf Klicks
      */
+    @FXML
+    public void initialize(){
+        fillList();
+    }
     private void fillList() {
         listOfLists.setOpacity(1);
         head1.setOpacity(1);
+        listOfTasks.setOpacity(0);
         list = aufgabenmanagerController.getList();
         if (list.getAufgaben().size() == 0) {
             list.getAufgaben().add(new AufgabenListe("Nothing here"));
@@ -69,7 +74,8 @@ public class addTaskToListController {
                 beschreibungen.add(a.getBeschreibung());
 
             }
-            listOfLists.setItems(FXCollections.observableArrayList(beschreibungen));
+
+            listOfLists.getItems().setAll(beschreibungen);
             listOfLists.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 /**
                  * Wird auf eine Liste geklickt wird diese gespeichert und die Aufgaben die hinzugefügt werden können werden angezeigt

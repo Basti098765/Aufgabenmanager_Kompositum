@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AufgabenListe extends Aufgabe{
 
-    private List<Aufgabe> aufgaben;
+    private ArrayList<Aufgabe> aufgaben;
 
     public AufgabenListe(String beschreibung){
         super(beschreibung);
@@ -40,11 +40,11 @@ public class AufgabenListe extends Aufgabe{
 
 
 
-    public List<Aufgabe> getAufgaben() {
+    public ArrayList<Aufgabe> getAufgaben() {
         return aufgaben;
     }
 
-    public void setAufgaben(List<Aufgabe> aufgaben) {
+    public void setAufgaben(ArrayList<Aufgabe> aufgaben) {
         this.aufgaben = aufgaben;
     }
 }

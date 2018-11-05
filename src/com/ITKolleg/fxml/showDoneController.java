@@ -21,6 +21,10 @@ public class showDoneController {
     public showDoneController()
     {
         all = aufgabenmanagerController.getList();
+
+    }
+    @FXML
+    public void initialize(){
         loadList();
     }
     /**

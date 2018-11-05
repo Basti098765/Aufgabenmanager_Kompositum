@@ -11,6 +11,6 @@
       <Label fx:id="head1" layoutX="40.0" layoutY="31.0" text="Zu welcher Liste wollen Sie eine Aufgabe hinzufügen?" />
       <ListView fx:id="listOfLists" editable="true" layoutX="40.0" layoutY="76.0" prefHeight="200.0" prefWidth="425.0" />
       <ListView fx:id="listOfTasks" editable="true" layoutX="40.0" layoutY="287.0" prefHeight="200.0" prefWidth="425.0" />
-      <Button fx:id="end" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" text="Go Back" onAction="#end" />
+      <Button fx:id="end" layoutX="517.0" layoutY="451.0" mnemonicParsing="false" onAction="#end" text="Go Back" />
    </children>
 </AnchorPane>

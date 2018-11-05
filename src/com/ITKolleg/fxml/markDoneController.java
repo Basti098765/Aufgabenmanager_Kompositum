@@ -24,6 +24,10 @@ public class markDoneController {
     public markDoneController()
     {
         all = aufgabenmanagerController.getList();
+
+    }
+    @FXML
+    public void initialize(){
         loadList();
     }
 
@@ -61,6 +65,7 @@ public class markDoneController {
                         a.wirdErledigt();
 
                     }
+                    loadList();
                 }
             }
         });
