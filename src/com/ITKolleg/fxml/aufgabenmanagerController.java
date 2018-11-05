@@ -27,7 +27,10 @@ public class aufgabenmanagerController {
     @FXML
     private Button markDone;
     private static AufgabenListe list;
-
+public aufgabenmanagerController()
+{
+    list =new AufgabenListe("Alle Aufgaben");
+}
 
     public void newTask(ActionEvent event)
     {

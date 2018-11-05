@@ -38,4 +38,13 @@ public class AufgabenListe extends Aufgabe{
         aufgaben.add(aufgabe);
     }
 
+
+
+    public List<Aufgabe> getAufgaben() {
+        return aufgaben;
+    }
+
+    public void setAufgaben(List<Aufgabe> aufgaben) {
+        this.aufgaben = aufgaben;
+    }
 }

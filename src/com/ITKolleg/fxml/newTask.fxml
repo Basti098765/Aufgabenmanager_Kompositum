@@ -10,5 +10,6 @@
       <Button layoutX="333.0" layoutY="114.0" mnemonicParsing="false" text="Button" onAction="#submit"  />
       <TextField  fx:id="beschreibung" layoutX="151.0" layoutY="114.0" promptText="beschreibung" />
       <Label layoutX="72.0" layoutY="118.0" text="Beschreibung"  />
+      <Button fx:id="end" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" text="Go Back" onAction="#end" />
    </children>
 </AnchorPane>
