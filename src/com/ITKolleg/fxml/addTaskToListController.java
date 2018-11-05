@@ -60,7 +60,7 @@ public class addTaskToListController {
         list = aufgabenmanagerController.getList();
         if (list.getAufgaben().size() == 0) {
             list.getAufgaben().add(new AufgabenListe("Nothing here"));
-            {
+
 
             }
             ArrayList<AufgabenListe> listSort = new ArrayList<>();
@@ -98,7 +98,9 @@ public class addTaskToListController {
                     listOfTasks.setOpacity(1);
                     ArrayList<String> tasksToChose = new ArrayList<>();
                     for (Aufgabe a : aufgabenmanagerController.getList().getAufgaben()) {
-                        tasksToChose.add(a.getBeschreibung());
+                        if (a.getBeschreibung() != toAdd.getBeschreibung()) {
+                            tasksToChose.add(a.getBeschreibung());
+                        }
 
                     }
                     listOfTasks.setItems(FXCollections.observableArrayList(tasksToChose));
@@ -121,7 +123,7 @@ public class addTaskToListController {
                 }
             });
         }
-    }
+
 
     /**
      * Schließt das Fenster
