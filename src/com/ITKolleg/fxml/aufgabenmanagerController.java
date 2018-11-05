@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
-
+/**
+ * Kontrolliert die Basis navigation auf die einzellnen Formulare
+ */
 public class aufgabenmanagerController {
     @FXML
     private Button newTask;
@@ -27,37 +29,69 @@ public class aufgabenmanagerController {
     @FXML
     private Button markDone;
     private static AufgabenListe list;
-public aufgabenmanagerController()
+
+    /**
+     * Setzt die Standard Aufgabenliste
+     */
+    public aufgabenmanagerController()
 {
     list =new AufgabenListe("Alle Aufgaben");
 }
 
+    /**
+     * ruft beim Klick loadStage() mit dem Namen der FXML Datei auf
+     * @param event
+     */
     public void newTask(ActionEvent event)
     {
     loadStage("newTask");
 
     }
+    /**
+     * ruft beim Klick loadStage() mit dem Namen der FXML Datei auf
+     * @param event
+     */
     public void newTaskList(ActionEvent event)
     {
     loadStage("newTaskList");
     }
+    /**
+     * ruft beim Klick loadStage() mit dem Namen der FXML Datei auf
+     * @param event
+     */
     public void addTaskToList(ActionEvent event)
     {
     loadStage("addTaskToList");
     }
+    /**
+     * ruft beim Klick loadStage() mit dem Namen der FXML Datei auf
+     * @param event
+     */
     public void showDone (ActionEvent event)
     {
     loadStage("showDone");
     }
+    /**
+     * ruft beim Klick loadStage() mit dem Namen der FXML Datei auf
+     * @param event
+     */
     public void showToDo(ActionEvent event)
     {
-    loadStage("showToDo");
+    loadStage("showUndone");
     }
+    /**
+     * ruft beim Klick loadStage() mit dem Namen der FXML Datei auf
+     * @param event
+     */
     public void markDone(ActionEvent event)
     {
         loadStage("markDone");
 
     }
+    /**
+     * Öffnet die jeweilige Stage die im Vorhinein ausgesucht wurde
+     * @param link der Name der fxml Datei
+     */
     public void loadStage(String link)
     {
 

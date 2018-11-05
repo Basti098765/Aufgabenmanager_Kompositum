@@ -18,6 +18,11 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+/**
+ * Lässt den Benutzer eine Liste aussuchen und fügt dieser eine Ausgesuchte Aufgabe hinzu
+ *
+ *
+ */
 public class addTaskToListController {
 
     @FXML
@@ -33,11 +38,17 @@ public class addTaskToListController {
 
     private AufgabenListe list;
 
+    /**
+     * Konstruktor setzt die Default liste und startet das füllen der List Views
+     */
     public addTaskToListController() {
          toAdd=aufgabenmanagerController.getList();
         fillList();
     }
 
+    /**
+     * Füllt die Listen und wartet auf Klicks
+     */
     private void fillList() {
         listOfLists.setOpacity(1);
         head1.setOpacity(1);
@@ -60,6 +71,10 @@ public class addTaskToListController {
             }
             listOfLists.setItems(FXCollections.observableArrayList(beschreibungen));
             listOfLists.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                /**
+                 * Wird auf eine Liste geklickt wird diese gespeichert und die Aufgaben die hinzugefügt werden können werden angezeigt
+                 * @param event
+                 */
                 @Override
                 public void handle(MouseEvent event) {
                     String description = (String) listOfLists.getSelectionModel().getSelectedItem();
@@ -82,6 +97,10 @@ public class addTaskToListController {
                     }
                     listOfTasks.setItems(FXCollections.observableArrayList(tasksToChose));
                     listOfTasks.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                        /**
+                         * Fügt die ausgewählte Aufgabe der entsprechenden Liste hinzu
+                         * @param event
+                         */
                         @Override
                         public void handle(MouseEvent event) {
                             String description = (String) listOfTasks.getSelectionModel().getSelectedItem();
@@ -97,6 +116,11 @@ public class addTaskToListController {
             });
         }
     }
+
+    /**
+     * Schließt das Fenster
+     * @param event
+     */
         @FXML
         public void end(ActionEvent event)
         {

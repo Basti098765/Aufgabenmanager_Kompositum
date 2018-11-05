@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ITKolleg.fxml.markDoneController">
+   <children>
+      <ListView fx:id="undone" layoutX="46.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label  layoutX="46.0" layoutY="31.0" text="Klicken Sie auf die Aufgabe die sie abgeschlossen haben" />
+       <Button fx:id="end" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" text="Go Back" onAction="#end" />
+   </children>
+</AnchorPane>

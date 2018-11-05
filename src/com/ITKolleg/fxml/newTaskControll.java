@@ -17,6 +17,11 @@ public class newTaskControll {
     private Button end;
     private AufgabenListe list;
 
+    /**
+     * Fügt beim Button Klick eine neue Einzelaufgabe zur Liste hinzu
+     * Diese Aufgabe wird aus der Beschreibung erstellt
+     * @param event
+     */
     @FXML
     public void submit(ActionEvent event)
     {
